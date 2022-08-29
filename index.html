@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <!-- CSS IMPORTS -->
+    <link rel="stylesheet" href="./assets/css/jass.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<header>
+    <div class="container">
+        <div class="header-content">
+            <h1>Weather Dashboard</h1>
+        </div>
+    </div>
+</header>
+
+<body>
+
+  <div class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-primary">
+    <!-- This is the Left Side of the screen -->
+    <div id="search-div" class="col-12 col-md-3 bg-light p-3">
+      <!-- Search Bar -->
+      <h1 class="text-primary">Search for a City:</h1>
+      <form id="search-form" class="mb-2">
+        <input id="search-input" class="form-input w-100" type="text" placeholder="Search!">
+        <button  id="Search-Btn"class="btn btn-info btn-block">Search</button>
+      </form>
+      <!-- Local Storage of the last 7 Searches with a Austin button because TX#1 :)-->
+      <div id="local-storage">
+        <h1 class="text-primary">History:</h1>
+
+      </div>
+    </div>
+    <!-- This is the right side of the screen -->
+    <div class="col-12 col-md-9 p-3 text-light">
+        <!-- Current Weather of the City the user chooses or default/Austin -->
+        <div id="current-data">
+            <h2 id="current-city"></h2>
+            <p id="current-temp"></p>
+            <p id="current-wind"></p>
+            <p id="current-humidity"></p>
+            <p id="current-uv"></p>
+        </div>
+        <!-- Weather for the 5 days that the user chooses or default/Austin -->
+        <div id="five-day-data">
+            <h2>5-Day Forecast:</h2>
+            <div class="card col-lg-2 col-md-12 col-sm-12">
+              <div id="day-one">
+                <h3 id="day1Date"></h3>
+                <p id="day1Temp"></p>
+                <p id="day1Wind"></p>
+                <p id="day1Humidity"></p>
+              </div>
+            </div>
+            <div class="card col-lg-2 col-md-12 col-sm-12">
+              <div id="day-two">
+                <h3 id="day2Date"></h3>
+                <p id="day2Temp"></p>
+                <p id="day2Wind"></p>
+                <p id="day2Humidity"></p>
+              </div>
+            </div>
+            <div class="card col-lg-2 col-md-12 col-sm-12">
+              <div id="day-three">
+                <h3 id="day3Date"></h3>
+                <p id="day3Temp"></p>
+                <p id="day3Wind"></p>
+                <p id="day3Humidity"></p>
+              </div>
+            </div>
+            <div class="card col-lg-2 col-md-12 col-sm-12">
+              <div id="day-four">
+                <h3 id="day4Date"></h3>
+                <p id="day4Temp"></p>
+                <p id="day4Wind"></p>
+                <p id="day4Humidity"></p>
+              </div>
+            </div>
+            <div class="card col-lg-2 col-md-12 col-sm-12">
+              <div id="day-five">
+                <h3 id="day5Date"></h3>
+                <p id="day5Temp"></p>
+                <p id="day5Wind"></p>
+                <p id="day5Humidity"></p>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+  </div>
+</body>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js">
+<script type="text/javascript" src="./assets/js/script.js"></script>
+</html>
