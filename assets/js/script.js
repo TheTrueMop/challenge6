@@ -6,11 +6,11 @@ var geoAPIurl;
 var lat;
 var lon;
 var currentDate = moment().format("MMMM, Do, YYYY");
-var date0 = moment().format("MMMM, Do, YYYY");
-var date1 = moment().format("MMMM, Do, YYYY");
-var date2 = moment().format("MMMM, Do, YYYY");
-var date3 = moment().format("MMMM, Do, YYYY");
-var date4 = moment().format("MMMM, Do, YYYY");
+var date1 = moment().add(1, 'days').format("MMMM Do");
+var date2 = moment().add(2, 'days').format("MMMM Do");
+var date3 = moment().add(3, 'days').format("MMMM Do");
+var date4 = moment().add(4, 'days').format("MMMM Do");
+var date5 = moment().add(5, 'days').format("MMMM Do");
 if(count == 0){
     userSearch = "Austin"
     getLatLong();
@@ -38,33 +38,33 @@ function currentData() {
         .then(function (response) {
             return response.json();
         }).then(function (data) {
-            $("#current-temp").text(data.current.temp)
-            $("#current-wind").text(data.current.wind_speed)
-            $("#current-humidity").text(data.current.humidity)
-            $("#current-uv").text(data.current.uvi)
+            $("#current-temp").text(data.current.temp + "°F");
+            $("#current-wind").text(data.current.wind_speed + " mph");
+            $("#current-humidity").text(data.current.humidity + "%");
+            $("#current-uv").text(data.current.uvi + " UV Index");
             $("#current-city").text(userSearch)
             $("#currentDate").text(currentDate)
-            $("#current-uv").text(data.current.uvi)
-            $("#day1Temp").text(data.daily[0].temp.day)
-            $("#day1Wind").text(data.daily[0].wind_speed)
-            $("#day1Humidity").text(data.daily[0].humidity)
-            $("#day1Date").text(date0)
-            $("#day2Temp").text(data.daily[1].temp.day)
-            $("#day2Wind").text(data.daily[1].wind_speed)
-            $("#day2Humidity").text(data.daily[1].humidity)
-            $("#day2Date").text(date1)
-            $("#day3Temp").text(data.daily[2].temp.day)
-            $("#day3Wind").text(data.daily[2].wind_speed)
-            $("#day3Humidity").text(data.daily[2].humidity)
-            $("#day3Date").text(date2)
-            $("#day4Temp").text(data.daily[3].temp.day)
-            $("#day4Wind").text(data.daily[3].wind_speed)
-            $("#day4Humidity").text(data.daily[3].humidity)
-            $("#day4Date").text(date3)
-            $("#day5Temp").text(data.daily[4].temp.day)
-            $("#day5Wind").text(data.daily[4].wind_speed)
-            $("#day5Humidity").text(data.daily[4].humidity)
-            $("#day5Date").text(date4)
+            $("#current-uv").text(data.current.uvi + " UV Index")
+            $("#day1Temp").text(data.daily[0].temp.day + "°F")
+            $("#day1Wind").text(data.daily[0].wind_speed + " mph")
+            $("#day1Humidity").text(data.daily[0].humidity + "%")
+            $("#day1Date").text(date1)
+            $("#day2Temp").text(data.daily[1].temp.day + "°F")
+            $("#day2Wind").text(data.daily[1].wind_speed + " mph")
+            $("#day2Humidity").text(data.daily[1].humidity + "%")
+            $("#day2Date").text(date2)
+            $("#day3Temp").text(data.daily[2].temp.day + "°F")
+            $("#day3Wind").text(data.daily[2].wind_speed + " mph")
+            $("#day3Humidity").text(data.daily[3].humidity + "%")
+            $("#day3Date").text(date3)
+            $("#day4Temp").text(data.daily[3].temp.day + "°F")
+            $("#day4Wind").text(data.daily[3].wind_speed + " mph")
+            $("#day4Humidity").text(data.daily[3].humidity + "%")
+            $("#day4Date").text(date4)
+            $("#day5Temp").text(data.daily[4].temp.day + "°F")
+            $("#day5Wind").text(data.daily[4].wind_speed + " mph")
+            $("#day5Humidity").text(data.daily[4].humidity + "%")
+            $("#day5Date").text(date5)
         })
 };
 function updateLocalStorage() {
